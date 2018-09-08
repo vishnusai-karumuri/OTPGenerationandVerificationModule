@@ -3,37 +3,53 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/mainbg"
+    tools:context="com.kvsn.builds.otpgenerationandverificationmodule.MainActivity">
 
     <EditText
+        android:id="@+id/mnum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Mobile Number"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Mobile Number"
         android:inputType="number"
-        android:id="@+id/mnum"/>
+        android:maxLines="1"
+        android:padding="8dp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send OTP"
         android:layout_gravity="center"
-        android:id="@+id/otpbut"
-        android:onClick="otpsend"/>
+        android:id="@+id/optbut"
+        android:onClick="otpsend"
+        style="@style/ebutton_style"
+        android:text="Send OTP" />
+
     <EditText
+        android:id="@+id/otpfield"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Otp"
-        android:id="@+id/otpfield"
-        android:inputType="number"/>
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="8dp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Verify"
         android:layout_gravity="center"
         android:id="@+id/verifyotpbut"
-        android:onClick="verifyotp"/>
-
+        android:onClick="verifyotp"
+        style="@style/ebutton_style"
+        android:text="Verify" />
 </LinearLayout>
