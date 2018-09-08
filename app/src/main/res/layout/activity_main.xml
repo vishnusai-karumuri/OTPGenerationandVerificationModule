@@ -52,4 +52,5 @@
         android:onClick="verifyotp"
         style="@style/ebutton_style"
         android:text="Verify" />
+    
 </LinearLayout>

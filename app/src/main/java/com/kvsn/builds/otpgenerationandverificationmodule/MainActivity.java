@@ -1,5 +1,6 @@
 package com.kvsn.builds.otpgenerationandverificationmodule;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.slidein, R.anim.slideout);
         setContentView(R.layout.activity_main);
 
         e1 = findViewById(R.id.mnum);
@@ -100,4 +102,6 @@ public class MainActivity extends AppCompatActivity
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verifyCode , input_code);
         signinmobile(credential);
     }
+
+
 }
